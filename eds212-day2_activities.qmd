@@ -1,0 +1,15 @@
+---
+title: "Day 2 Tasks"
+format: html
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+## attach tidyverse and palmerpenguins
+install.packages("palmerpenguins")
+library(tidyverse)
+library(palmerpenguins)
+```
+
