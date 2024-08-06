@@ -8,8 +8,40 @@ editor_options:
 
 ```{r}
 ## attach tidyverse and palmerpenguins
-install.packages("palmerpenguins")
 library(tidyverse)
 library(palmerpenguins)
+```
+
+```{r}
+# find the slope of f(x) = x^2 at x=3
+eq1 <- function(x) {
+  x^2
+}
+eq1
+
+deriv_eq1 <- D(expr = expression(x^2), name = "x")
+deriv_eq1
+
+deriv_eq1_fun <- function(x) {
+  2 * x 
+}
+
+deriv_eq1_fun(3)
+```
+
+```{r}
+# Find the slope of f(a) = 2(3a+2)^4 - 5 at a = 1.2
+
+eq2 <- function(a) {
+  2 * (3*a+2)^4 - 5
+}
+
+deriv_eq2 <- D(expr = expression(2 * (3 * a +2)^4 - 5), name = "a")
+
+deriv_eq2_fun <- function(a) {
+  2 * (4 * (3 * (3 * a + 2)^3))
+}
+
+deriv_eq2_fun(1.2)
 ```
 
