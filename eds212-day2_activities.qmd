@@ -45,3 +45,24 @@ deriv_eq2_fun <- function(a) {
 deriv_eq2_fun(1.2)
 ```
 
+
+```{r}
+# find penguins data from palmerpenguins library
+
+penguins_data <- penguins
+
+ggplot(data = penguins_data, aes(x = bill_depth_mm, y = bill_length_mm, colour = species)) +
+         geom_point(na.rm = TRUE) + xlab("Bill Depth in mm") +
+  ylab("Bill Length in mm") + ggtitle("Bill Depth vs. Bill Length in mm") 
+
+```
+
+```{r}
+ggplot(penguins_data, aes(x = species, y = flipper_length_mm, colour = species)) +
+  geom_jitter() + 
+  xlab("Species") +
+  ylab("Flipper Length in mm") +
+  ggtitle("Flipper length by Species of Penguins")
+  
+```
+
